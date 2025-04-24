@@ -1,0 +1,141 @@
+<!-- 第一个页面：任务中心 -->
+<div class="phone-frame mb-10">
+    <div class="h-full flex flex-col">
+        <!-- 顶部导航栏 -->
+        <div class="px-5 pt-6 pb-3 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span class="tab-active px-1 py-2">任务中心</span>
+                <span class="tab-inactive px-1 py-2">情绪日志</span>
+                <span class="tab-inactive px-1 py-2">家庭周报</span>
+                <span class="tab-inactive px-1 py-2">会议复盘</span>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center bg-gray-50 rounded-full px-3 py-1 mr-2 cursor-pointer">
+                    <span class="mr-1">✨</span>
+                    <span class="text-sm font-medium">1200</span>
+                </div>
+                <div class="w-9 h-9 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                    <span class="text-sm">👨‍👩‍👧</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 积分提示条 -->
+        <div class="mx-5 mb-4">
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-2 rounded-xl text-xs flex items-center">
+                <span class="text-black">💡 200分可兑换家庭电影之夜</span>
+            </div>
+        </div>
+        
+        <!-- 任务进度 -->
+        <div class="mx-5 mb-5 flex justify-between items-center">
+            <div class="task-progress">
+                <div class="task-progress-inner">
+                    <span class="text-2xl font-semibold">75%</span>
+                </div>
+            </div>
+            <div class="flex-1 ml-5">
+                <h3 class="text-lg font-semibold mb-1">今日任务</h3>
+                <p class="text-sm">已完成 15/20 项</p>
+                <div class="mt-2 flex space-x-2">
+                    <div class="flex items-center">
+                        <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-xs">👨</div>
+                        <span class="text-xs ml-1">7/8</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-xs">👩</div>
+                        <span class="text-xs ml-1">6/8</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-xs">👧</div>
+                        <span class="text-xs ml-1">2/4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 任务分类与列表 -->
+        <div class="flex flex-1 overflow-hidden">
+            <!-- 左侧分类 -->
+            <div class="w-24 pt-3 border-r border-gray-100">
+                <div class="flex flex-col">
+                    <div class="py-3 px-4 bg-gray-50 text-sm font-medium">家务</div>
+                    <div class="py-3 px-4 text-gray-400 text-sm">学习</div>
+                    <div class="py-3 px-4 text-gray-400 text-sm">购物</div>
+                    <div class="py-3 px-4 text-gray-400 text-sm">自定义</div>
+                </div>
+            </div>
+            
+            <!-- 右侧任务列表 -->
+            <div class="flex-1 overflow-y-auto px-4 pt-3 pb-20">
+                <!-- 任务卡片 1 -->
+                <div class="task-card bg-white rounded-xl p-4 mb-3 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium">洗碗</h4>
+                        <div class="flex space-x-1">
+                            <div class="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center text-xs">👩</div>
+                            <div class="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center text-xs">👧</div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3">今晚8点前</div>
+                    <div class="flex justify-between">
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">🔄 重新分配</button>
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">✅ 完成打卡</button>
+                    </div>
+                </div>
+                
+                <!-- 任务卡片 2 -->
+                <div class="task-card bg-white rounded-xl p-4 mb-3 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium">扔垃圾</h4>
+                        <div class="flex space-x-1">
+                            <div class="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center text-xs">👨</div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3">今天下午6点前</div>
+                    <div class="flex justify-between">
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">🔄 重新分配</button>
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">✅ 完成打卡</button>
+                    </div>
+                </div>
+                
+                <!-- 任务卡片 3 -->
+                <div class="task-card bg-white rounded-xl p-4 mb-3 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium">整理衣物</h4>
+                        <div class="flex space-x-1">
+                            <div class="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center text-xs">👩</div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3">明天中午12点前</div>
+                    <div class="flex justify-between">
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">🔄 重新分配</button>
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">✅ 完成打卡</button>
+                    </div>
+                </div>
+                
+                <!-- 任务卡片 4 -->
+                <div class="task-card bg-white rounded-xl p-4 mb-3 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium">清洁浴室</h4>
+                        <div class="flex space-x-1">
+                            <div class="w-6 h-6 rounded-full bg-gray-50 flex items-center justify-center text-xs">👨</div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3">周末前</div>
+                    <div class="flex justify-between">
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">🔄 重新分配</button>
+                        <button class="bg-gray-50 text-xs px-3 py-1 rounded-full">✅ 完成打卡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部添加按钮 -->
+        <div class="absolute bottom-6 right-6">
+            <button class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg">
+                <span class="text-white text-2xl">+</span>
+            </button>
+        </div>
+    </div>
+</div> 
