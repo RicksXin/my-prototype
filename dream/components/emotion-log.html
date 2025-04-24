@@ -1,262 +1,287 @@
 <!-- 第二个页面：情绪日志 -->
 <div class="phone-frame mb-10">
-    <div class="h-full flex flex-col">
-        <!-- 顶部导航栏 -->
-        <div class="px-5 pt-6 pb-3 flex justify-between items-center">
-            <div class="flex space-x-4">
-                <span class="tab-inactive px-1 py-2">任务中心</span>
-                <span class="tab-active px-1 py-2">情绪日志</span>
-                <span class="tab-inactive px-1 py-2">家庭周报</span>
-                <span class="tab-inactive px-1 py-2">会议复盘</span>
-            </div>
-            <div class="flex items-center">
-                <div class="flex items-center bg-gray-50 rounded-full px-3 py-1 mr-2 cursor-pointer">
-                    <span class="mr-1">✨</span>
-                    <span class="text-sm font-medium">1200</span>
-                </div>
-                <div class="w-9 h-9 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
-                    <span class="text-sm">👨‍👩‍👧</span>
+    <div class="h-full flex flex-col overflow-hidden">
+        <!-- 头部用户信息区域 -->
+        <div class="px-5 pt-6 pb-3">
+            <div class="flex justify-end">
+                <div class="flex items-center">
+                    <div class="flex items-center bg-gray-50 rounded-full px-3 py-1 mr-2 cursor-pointer">
+                        <span class="mr-1">✨</span>
+                        <span class="text-sm font-medium">1200</span>
+                    </div>
+                    <div class="w-9 h-9 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                        <span class="text-sm">👨‍👩‍👧</span>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- 月份选择器 -->
-        <div class="px-5 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <h3 class="text-lg font-semibold">2023年11月</h3>
-                <button class="ml-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-50">
-                    <span class="text-xs">▼</span>
-                </button>
-            </div>
-            <div class="flex space-x-1">
-                <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
-                    <span class="text-xs">◀</span>
-                </button>
-                <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
-                    <span class="text-xs">▶</span>
-                </button>
-            </div>
-        </div>
-        
-        <!-- 日历视图 -->
-        <div class="px-5 pt-2 pb-4">
-            <div class="mb-3 flex justify-between">
-                <span class="text-xs w-10 text-center">日</span>
-                <span class="text-xs w-10 text-center">一</span>
-                <span class="text-xs w-10 text-center">二</span>
-                <span class="text-xs w-10 text-center">三</span>
-                <span class="text-xs w-10 text-center">四</span>
-                <span class="text-xs w-10 text-center">五</span>
-                <span class="text-xs w-10 text-center">六</span>
+        <!-- 主要内容区域，添加滚动条 -->
+        <div class="flex-1 overflow-y-auto">
+            <!-- 月份选择器 -->
+            <div class="px-5 py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <h3 class="text-lg font-semibold">2023年11月</h3>
+                    <button class="ml-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-50">
+                        <span class="text-xs">▼</span>
+                    </button>
+                </div>
+                <div class="flex space-x-1">
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
+                        <span class="text-xs">◀</span>
+                    </button>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
+                        <span class="text-xs">▶</span>
+                    </button>
+                </div>
             </div>
             
-            <table class="emotion-calendar w-full">
-                <tbody>
-                    <!-- 第一周 -->
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">1</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">2</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">3</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">4</div>
-                        </td>
-                    </tr>
-                    <!-- 第二周 -->
-                    <tr>
-                        <td>
-                            <div class="emotion-day">5</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">6</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">7</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">8</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">9</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">10</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">11</div>
-                        </td>
-                    </tr>
-                    <!-- 第三周 -->
-                    <tr>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">12</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">13</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">14</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day emotion-with-mood">15</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">16</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day emotion-selected">17</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">18</div>
-                        </td>
-                    </tr>
-                    <!-- 第四周 -->
-                    <tr>
-                        <td>
-                            <div class="emotion-day">19</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">20</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">21</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">22</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">23</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">24</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">25</div>
-                        </td>
-                    </tr>
-                    <!-- 第五周 -->
-                    <tr>
-                        <td>
-                            <div class="emotion-day">26</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">27</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">28</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">29</div>
-                        </td>
-                        <td>
-                            <div class="emotion-day">30</div>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- 情绪记录卡片 -->
-        <div class="px-5 pt-3">
-            <div class="bg-white rounded-xl p-5 shadow-sm">
-                <div class="flex justify-between items-center mb-4">
-                    <h4 class="font-semibold">11月17日情绪记录</h4>
-                    <div class="flex items-center">
-                        <span class="text-xs mr-2">匿名模式</span>
-                        <div class="w-10 h-5 bg-gray-200 rounded-full relative">
-                            <div class="absolute left-0 w-5 h-5 bg-white rounded-full shadow"></div>
-                        </div>
-                    </div>
+            <!-- 日历视图 -->
+            <div class="px-5 pt-2 pb-4">
+                <div class="mb-3 flex justify-between">
+                    <span class="text-xs w-10 text-center">日</span>
+                    <span class="text-xs w-10 text-center">一</span>
+                    <span class="text-xs w-10 text-center">二</span>
+                    <span class="text-xs w-10 text-center">三</span>
+                    <span class="text-xs w-10 text-center">四</span>
+                    <span class="text-xs w-10 text-center">五</span>
+                    <span class="text-xs w-10 text-center">六</span>
                 </div>
                 
-                <div class="mb-5">
-                    <div class="flex justify-between mb-3">
-                        <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
-                            <span class="text-2xl mb-1">😊</span>
-                            <span class="text-xs">开心</span>
-                        </button>
-                        <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center border-2 border-black">
-                            <span class="text-2xl mb-1">😐</span>
-                            <span class="text-xs">平静</span>
-                        </button>
-                        <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
-                            <span class="text-2xl mb-1">😢</span>
-                            <span class="text-xs">难过</span>
-                        </button>
+                <table class="emotion-calendar w-full">
+                    <tbody>
+                        <!-- 第一周 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">1</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">2</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">3</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">4</div>
+                            </td>
+                        </tr>
+                        <!-- 第二周 -->
+                        <tr>
+                            <td>
+                                <div class="emotion-day">5</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">6</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">7</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">8</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">9</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">10</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">11</div>
+                            </td>
+                        </tr>
+                        <!-- 第三周 -->
+                        <tr>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">12</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">13</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">14</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day emotion-with-mood">15</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">16</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day emotion-selected">17</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">18</div>
+                            </td>
+                        </tr>
+                        <!-- 第四周 -->
+                        <tr>
+                            <td>
+                                <div class="emotion-day">19</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">20</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">21</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">22</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">23</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">24</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">25</div>
+                            </td>
+                        </tr>
+                        <!-- 第五周 -->
+                        <tr>
+                            <td>
+                                <div class="emotion-day">26</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">27</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">28</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">29</div>
+                            </td>
+                            <td>
+                                <div class="emotion-day">30</div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- 情绪记录卡片 -->
+            <div class="px-5 pt-3">
+                <div class="bg-white rounded-xl p-5 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-semibold">11月17日情绪记录</h4>
+                        <div class="flex items-center">
+                            <span class="text-xs mr-2">匿名模式</span>
+                            <div class="w-10 h-5 bg-gray-200 rounded-full relative">
+                                <div class="absolute left-0 w-5 h-5 bg-white rounded-full shadow"></div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="mb-4">
-                        <textarea placeholder="简单记录一下原因..." class="w-full h-20 bg-gray-50 rounded-xl p-3 text-sm resize-none outline-none"></textarea>
+                    <div class="mb-5">
+                        <div class="flex justify-between mb-3">
+                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
+                                <span class="text-2xl mb-1">😊</span>
+                                <span class="text-xs">开心</span>
+                            </button>
+                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center border-2 border-black">
+                                <span class="text-2xl mb-1">😐</span>
+                                <span class="text-xs">平静</span>
+                            </button>
+                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
+                                <span class="text-2xl mb-1">😢</span>
+                                <span class="text-xs">难过</span>
+                            </button>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <textarea placeholder="简单记录一下原因..." class="w-full h-20 bg-gray-50 rounded-xl p-3 text-sm resize-none outline-none"></textarea>
+                        </div>
+                        
+                        <button class="w-full bg-black text-white py-3 rounded-xl text-sm font-medium">保存记录</button>
                     </div>
-                    
-                    <button class="w-full bg-black text-white py-3 rounded-xl text-sm font-medium">保存记录</button>
+                </div>
+            </div>
+            
+            <!-- 情绪历史趋势图 -->
+            <div class="px-5 pt-4 mb-20">
+                <h4 class="text-sm font-medium mb-2">本周情绪趋势</h4>
+                <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="h-24 flex items-end justify-between">
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-8 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">一</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">二</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-6 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">三</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-7 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">四</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-11 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">五</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-9 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">六</span>
+                        </div>
+                        <div class="w-7 flex flex-col items-center">
+                            <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
+                                <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
+                            </div>
+                            <span class="text-xs mt-1">日</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- 情绪历史趋势图 -->
-        <div class="px-5 pt-4 mt-auto mb-6">
-            <h4 class="text-sm font-medium mb-2">本周情绪趋势</h4>
-            <div class="bg-white rounded-xl p-4 shadow-sm">
-                <div class="h-24 flex items-end justify-between">
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-8 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">一</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">二</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-6 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">三</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-7 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">四</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-11 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">五</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-9 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">六</span>
-                    </div>
-                    <div class="w-7 flex flex-col items-center">
-                        <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                            <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
-                        </div>
-                        <span class="text-xs mt-1">日</span>
-                    </div>
+        <!-- 底部导航栏 -->
+        <div class="px-5 py-3 border-t border-gray-100 bg-white">
+            <div class="flex justify-between px-2">
+                <div class="tab-inactive px-3 py-2 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                </div>
+                <div class="tab-active px-3 py-2 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="tab-inactive px-3 py-2 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <div class="tab-inactive px-3 py-2 flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
                 </div>
             </div>
         </div>
         
         <!-- 底部添加按钮 -->
-        <div class="absolute bottom-6 right-6">
+        <div class="absolute bottom-20 right-6">
             <button class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg">
                 <span class="text-white text-2xl">+</span>
             </button>
