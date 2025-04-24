@@ -9,7 +9,7 @@
                         <span class="mr-1">✨</span>
                         <span class="text-sm font-medium">1200</span>
                     </div>
-                    <div class="w-9 h-9 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                    <div class="w-9 h-9 bg-gradient-to-br from-[#f28561] to-[#ffb38a] rounded-full flex items-center justify-center">
                         <span class="text-sm">👨‍👩‍👧</span>
                     </div>
                 </div>
@@ -22,16 +22,16 @@
             <div class="px-5 py-3 flex justify-between items-center">
                 <div class="flex items-center">
                     <h3 class="text-lg font-semibold">2023年11月</h3>
-                    <button class="ml-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-50">
-                        <span class="text-xs">▼</span>
+                    <button class="ml-2 w-6 h-6 flex items-center justify-center rounded-full bg-[#ffeee7]">
+                        <span class="text-xs text-[#f28561]">▼</span>
                     </button>
                 </div>
                 <div class="flex space-x-1">
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
-                        <span class="text-xs">◀</span>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-[#ffeee7]">
+                        <span class="text-xs text-[#f28561]">◀</span>
                     </button>
-                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50">
-                        <span class="text-xs">▶</span>
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-[#ffeee7]">
+                        <span class="text-xs text-[#f28561]">▶</span>
                     </button>
                 </div>
             </div>
@@ -47,6 +47,27 @@
                     <span class="text-xs w-10 text-center">五</span>
                     <span class="text-xs w-10 text-center">六</span>
                 </div>
+                
+                <style>
+                    .emotion-day {
+                        width: 36px;
+                        height: 36px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        margin: 2px auto;
+                    }
+                    .emotion-with-mood {
+                        background-color: #ffeee7;
+                        color: #f28561;
+                    }
+                    .emotion-selected {
+                        background-color: #f28561;
+                        color: white;
+                    }
+                </style>
                 
                 <table class="emotion-calendar w-full">
                     <tbody>
@@ -179,25 +200,25 @@
                     
                     <div class="mb-5">
                         <div class="flex justify-between mb-3">
-                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
+                            <button class="w-20 h-20 rounded-xl bg-[#e6f8f3] flex flex-col items-center justify-center">
                                 <span class="text-2xl mb-1">😊</span>
-                                <span class="text-xs">开心</span>
+                                <span class="text-xs text-[#3ecf9f]">开心</span>
                             </button>
-                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center border-2 border-black">
+                            <button class="w-20 h-20 rounded-xl bg-[#ffeee7] flex flex-col items-center justify-center border-2 border-[#f28561]">
                                 <span class="text-2xl mb-1">😐</span>
-                                <span class="text-xs">平静</span>
+                                <span class="text-xs text-[#f28561]">平静</span>
                             </button>
-                            <button class="w-20 h-20 rounded-xl bg-gray-50 flex flex-col items-center justify-center">
+                            <button class="w-20 h-20 rounded-xl bg-[#ffeee7] flex flex-col items-center justify-center">
                                 <span class="text-2xl mb-1">😢</span>
-                                <span class="text-xs">难过</span>
+                                <span class="text-xs text-[#f28561]">难过</span>
                             </button>
                         </div>
                         
                         <div class="mb-4">
-                            <textarea placeholder="简单记录一下原因..." class="w-full h-20 bg-gray-50 rounded-xl p-3 text-sm resize-none outline-none"></textarea>
+                            <textarea placeholder="简单记录一下原因..." class="w-full h-20 bg-[#ffeee7] rounded-xl p-3 text-sm resize-none outline-none"></textarea>
                         </div>
                         
-                        <button class="w-full bg-black text-white py-3 rounded-xl text-sm font-medium">保存记录</button>
+                        <button class="w-full bg-[#3ecf9f] text-white py-3 rounded-xl text-sm font-medium">保存记录</button>
                     </div>
                 </div>
             </div>
@@ -209,43 +230,43 @@
                     <div class="h-24 flex items-end justify-between">
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-8 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-8 w-1 bg-[#3ecf9f] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">一</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-10 w-1 bg-[#f28561] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">二</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-6 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-6 w-1 bg-[#3ecf9f] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">三</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-7 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-7 w-1 bg-[#f28561] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">四</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-11 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-11 w-1 bg-[#f28561] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">五</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-9 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-9 w-1 bg-[#3ecf9f] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">六</span>
                         </div>
                         <div class="w-7 flex flex-col items-center">
                             <div class="h-12 w-1 bg-gray-200 rounded-t-full relative">
-                                <div class="absolute bottom-0 h-10 w-1 bg-black rounded-t-full"></div>
+                                <div class="absolute bottom-0 h-10 w-1 bg-[#f28561] rounded-t-full"></div>
                             </div>
                             <span class="text-xs mt-1">日</span>
                         </div>
@@ -262,7 +283,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                 </div>
-                <div class="tab-active px-3 py-2 flex flex-col items-center">
+                <div class="tab-active px-3 py-2 flex flex-col items-center text-[#f28561]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -282,8 +303,8 @@
         
         <!-- 底部添加按钮 -->
         <div class="absolute bottom-20 right-6">
-            <button class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg">
-                <span class="text-white text-2xl">+</span>
+            <button class="w-14 h-14 rounded-full bg-[#f28561] flex items-center justify-center shadow-lg text-white text-2xl">
+                +
             </button>
         </div>
     </div>
