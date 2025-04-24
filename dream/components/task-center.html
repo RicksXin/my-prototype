@@ -1,9 +1,39 @@
 <!-- 第一个页面：任务中心 -->
 <div class="phone-frame mb-10">
-    <div class="h-full flex flex-col overflow-hidden">
-        <!-- 头部用户信息区域 -->
-        <div class="px-5 pt-6 pb-3">
-            <div class="flex justify-end">
+    <div class="h-full flex flex-col overflow-hidden relative">
+        <!-- 勋章贴纸装饰背景 - 降低层级并添加毛玻璃效果 -->
+        <div class="absolute top-0 left-0 w-full h-32 overflow-hidden z-0 pointer-events-none">
+            <div class="absolute -top-4 -left-4 -rotate-6 opacity-40 blur-sm">
+                <div class="w-20 h-20 rounded-lg bg-gradient-to-br from-yellow-100 to-yellow-300 flex items-center justify-center shadow-sm">
+                    <span class="text-3xl">🧹</span>
+                </div>
+            </div>
+            <div class="absolute top-10 -right-4 rotate-12 opacity-30 blur-sm">
+                <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-green-100 to-green-300 flex items-center justify-center shadow-sm">
+                    <span class="text-2xl">🍲</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-1/4 rotate-3 opacity-25 blur-sm">
+                <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center shadow-sm">
+                    <span class="text-xl">📚</span>
+                </div>
+            </div>
+            <!-- 添加毛玻璃效果覆盖层 -->
+            <div class="absolute inset-0 backdrop-blur-sm bg-white/30"></div>
+        </div>
+
+        <!-- 顶部用户信息区域 -->
+        <div class="px-5 pt-6 pb-3 relative z-10">
+            <!-- 下拉提示和用户信息 -->
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-xs text-gray-400 flex items-center">
+                        <span>下拉查看勋章墙</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
                 <div class="flex items-center">
                     <div class="flex items-center bg-gray-50 rounded-full px-3 py-1 mr-2 cursor-pointer">
                         <span class="mr-1">✨</span>
@@ -17,7 +47,7 @@
         </div>
 
         <!-- 主要内容区域，添加滚动条 -->
-        <div class="flex-1 overflow-y-auto">
+        <div class="flex-1 overflow-y-auto relative z-10">
             <!-- 积分提示条 -->
             <div class="mx-5 mb-4">
                 <div class="bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-2 rounded-xl text-xs flex items-center">
@@ -52,14 +82,24 @@
                 </div>
             </div>
             
-            <!-- 快捷操作按钮 -->
-            <div class="mx-5 mb-3 flex space-x-3">
-                <button class="flex-1 bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-700 text-sm font-medium px-4 py-2 rounded-xl flex items-center justify-center">
-                    <span class="mr-1">📋</span>导入模板
-                </button>
-                <button class="flex-1 bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 text-sm font-medium px-4 py-2 rounded-xl flex items-center justify-center">
-                    <span class="mr-1">✏️</span>新建任务
-                </button>
+            <!-- 简化的勋章进度提示 -->
+            <div class="mx-5 mb-4">
+                <div class="bg-white rounded-xl p-3 shadow-sm">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center mr-2">
+                            <span class="text-base">🏆</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xs font-medium">任务连续完成7天</h4>
+                                <span class="text-xs">5/7天</span>
+                            </div>
+                            <div class="h-1.5 mt-1 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-black rounded-full" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- 任务分类与列表 -->
@@ -205,9 +245,17 @@
                 </div>
             </div>
         </div>
+
+        <!-- 悬浮操作按钮（合并新建和导入功能） -->
+        <div class="fixed bottom-32 right-6 z-100">
+            <!-- 简单明确的圆形加号按钮 -->
+            <button class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-xl text-white text-3xl font-bold">
+                +
+            </button>
+        </div>
         
         <!-- 底部导航栏 -->
-        <div class="px-5 py-3 border-t border-gray-100 bg-white">
+        <div class="px-5 py-3 border-t border-gray-100 bg-white relative z-10">
             <div class="flex justify-between px-2">
                 <div class="tab-active px-3 py-2 flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -231,12 +279,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- 底部添加按钮 -->
-        <div class="absolute bottom-20 right-6">
-            <button class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg">
-                <span class="text-white text-2xl">+</span>
-            </button>
-        </div>
     </div>
+</div> 
 </div> 
