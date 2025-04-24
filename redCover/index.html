@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书风格封面生成器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>保存的封面</h3>
+                <button id="clear-history-btn" title="清空历史记录">清空</button>
+            </div>
+            <div class="history-list" id="history-list">
+                <div class="empty-history">暂无保存的封面</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="editor">
+                <h2>小红书封面生成器</h2>
+                <div class="form-group">
+                    <label for="cover-text">封面文字</label>
+                    <textarea id="cover-text" rows="4" placeholder="输入封面文字，每行将自动分段"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>高亮文字</label>
+                    <div class="highlight-container">
+                        <div class="highlight-item">
+                            <input type="text" class="highlight-text" placeholder="输入需要高亮的文字">
+                            <input type="color" class="highlight-color" value="#FF6B6B">
+                            <button type="button" class="remove-highlight-btn">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-highlight-btn">+ 添加高亮文字</button>
+                </div>
+                <div class="form-group">
+                    <label>背景样式</label>
+                    <div class="bg-options">
+                        <span class="bg-option selected" data-bg="dot">点状</span>
+                        <span class="bg-option" data-bg="solid">纯色</span>
+                        <span class="bg-option" data-bg="gradient">渐变</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="footer-left">左下角文字</label>
+                    <input type="text" id="footer-left" value="Embrace the life">
+                </div>
+                <div class="form-group">
+                    <label for="footer-right">右下角文字</label>
+                    <input type="text" id="footer-right" value="Made with care">
+                </div>
+                <div class="form-group">
+                    <label>水印选项</label>
+                    <div class="watermark-options">
+                        <div class="watermark-option">
+                            <input type="checkbox" id="watermark-toggle" class="watermark-toggle">
+                            <label for="watermark-toggle">添加避雷水印</label>
+                        </div>
+                        <div class="watermark-settings" id="watermark-settings">
+                            <div class="watermark-position">
+                                <span>位置：</span>
+                                <select id="watermark-position">
+                                    <option value="top-left">左上角</option>
+                                    <option value="top-right">右上角</option>
+                                    <option value="bottom-left">左下角</option>
+                                    <option value="bottom-right" selected>右下角</option>
+                                    <option value="center">居中</option>
+                                </select>
+                            </div>
+                            <div class="watermark-font-size">
+                                <div class="slider-header">
+                                    <span>字号：</span>
+                                    <span class="font-size-value">24px</span>
+                                </div>
+                                <input type="range" id="watermark-font-size" min="12" max="40" value="24" class="slider">
+                            </div>
+                            <div class="watermark-opacity">
+                                <div class="slider-header">
+                                    <span>透明度：</span>
+                                    <span class="opacity-value">100%</span>
+                                </div>
+                                <input type="range" id="watermark-opacity" min="10" max="100" value="100" class="slider">
+                            </div>
+                            <div class="watermark-color">
+                                <span>颜色：</span>
+                                <input type="color" id="watermark-color" value="#FF0000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cover-title">保存标题 (选填)</label>
+                    <input type="text" id="cover-title" placeholder="为当前封面添加标题，便于识别">
+                </div>
+                <button id="generate-btn">生成封面</button>
+                <button id="download-btn">下载封面</button>
+            </div>
+
+            <div class="preview-container">
+                <div class="preview" id="preview">
+                    <div class="cover">
+                        <div class="cover-content">
+                            <div class="cover-text" id="preview-text">
+                                女儿创办的<br>
+                                <span class="highlight" style="--highlight-color: #FF6B6B;">旅行社</span>没起色<br>
+                                心理出问题了
+                            </div>
+                        </div>
+                        <div class="cover-footer">
+                            <div class="footer-left" id="preview-footer-left">Embrace the life</div>
+                            <div class="footer-right" id="preview-footer-right">Made with care</div>
+                        </div>
+                        <div class="watermark" id="watermark">避雷❗❗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
