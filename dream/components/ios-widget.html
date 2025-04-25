@@ -1,0 +1,189 @@
+<!-- iOS小组件页面 -->
+<div class="flex flex-col items-center p-10 bg-gray-100">
+    <h3 class="text-lg font-semibold mb-8">iOS小组件预览</h3>
+    
+    <!-- 小尺寸小组件 - 个人今日待办 -->
+    <div class="mb-10">
+        <div class="relative w-[170px] h-[170px] rounded-3xl bg-white overflow-hidden shadow-lg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <!-- 半透明背景图案 -->
+            <div class="absolute inset-0 opacity-5 bg-pattern-dots"></div>
+            
+            <!-- 小组件内容 -->
+            <div class="p-4 flex flex-col h-full">
+                <!-- 头部 -->
+                <div class="flex justify-between items-center mb-2">
+                    <div class="flex items-center">
+                        <div class="w-7 h-7 rounded-full bg-[#f28561] flex items-center justify-center mr-1">
+                            <span class="text-xs text-white">👨</span>
+                        </div>
+                        <span class="text-xs font-semibold">个人待办</span>
+                    </div>
+                    <span class="text-xs text-gray-500">今日</span>
+                </div>
+                
+                <!-- 待办列表 -->
+                <div class="flex-1">
+                    <div class="mb-2">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full border border-[#f28561] mr-2 flex-shrink-0"></div>
+                            <span class="text-xs">准备晚餐食材</span>
+                        </div>
+                        <div class="text-[10px] text-gray-400 ml-6">18:00</div>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full border border-[#f28561] mr-2 flex-shrink-0 flex items-center justify-center">
+                                <div class="w-2 h-2 rounded-full bg-[#f28561]"></div>
+                            </div>
+                            <span class="text-xs line-through text-gray-400">完成工作汇报</span>
+                        </div>
+                        <div class="text-[10px] text-gray-400 ml-6">14:30</div>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-full border border-[#f28561] mr-2 flex-shrink-0"></div>
+                            <span class="text-xs">辅导孩子作业</span>
+                        </div>
+                        <div class="text-[10px] text-gray-400 ml-6">19:30</div>
+                    </div>
+                </div>
+                
+                <!-- 底部进度 -->
+                <div class="mt-auto">
+                    <div class="flex justify-between text-xs mb-1">
+                        <span>今日进度</span>
+                        <span class="text-[#f28561]">33%</span>
+                    </div>
+                    <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-[#f28561] rounded-full" style="width: 33%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 中尺寸小组件 - 家庭今日待办 -->
+    <div>
+        <div class="relative w-[364px] h-[170px] rounded-3xl bg-white overflow-hidden shadow-lg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <!-- 半透明背景图案 -->
+            <div class="absolute inset-0 opacity-5 bg-pattern-dots"></div>
+            
+            <!-- 小组件内容 -->
+            <div class="p-4 flex flex-col h-full">
+                <!-- 头部 -->
+                <div class="flex justify-between items-center mb-2">
+                    <div class="flex items-center">
+                        <div class="w-7 h-7 rounded-full bg-[#f28561] flex items-center justify-center mr-1">
+                            <span class="text-xs text-white">👨‍👩‍👧</span>
+                        </div>
+                        <span class="text-xs font-semibold">幸福之家</span>
+                        <span class="text-xs text-gray-500 ml-2">今日家庭任务</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex items-center mr-2">
+                            <span class="text-xs">✨</span>
+                            <span class="text-xs ml-1">1200</span>
+                        </div>
+                        <span class="text-xs text-[#61C2F2]">今日</span>
+                    </div>
+                </div>
+                
+                <!-- 内容区域 -->
+                <div class="flex flex-1">
+                    <!-- 左侧成员任务 -->
+                    <div class="w-[140px] border-r border-gray-100 pr-3">
+                        <div class="mb-2">
+                            <div class="flex items-center mb-1">
+                                <div class="w-5 h-5 rounded-full bg-[#ffeee7] flex items-center justify-center text-[10px] mr-1">👨</div>
+                                <span class="text-xs font-medium">爸爸</span>
+                                <span class="text-[10px] text-gray-400 ml-auto">2/3</span>
+                            </div>
+                            <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-[#f28561] rounded-full" style="width: 66%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <div class="flex items-center mb-1">
+                                <div class="w-5 h-5 rounded-full bg-[#ffeee7] flex items-center justify-center text-[10px] mr-1">👩</div>
+                                <span class="text-xs font-medium">妈妈</span>
+                                <span class="text-[10px] text-gray-400 ml-auto">3/4</span>
+                            </div>
+                            <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-[#f28561] rounded-full" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center mb-1">
+                                <div class="w-5 h-5 rounded-full bg-[#ffeee7] flex items-center justify-center text-[10px] mr-1">👧</div>
+                                <span class="text-xs font-medium">孩子</span>
+                                <span class="text-[10px] text-gray-400 ml-auto">1/2</span>
+                            </div>
+                            <div class="h-1 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-[#f28561] rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧任务列表 -->
+                    <div class="flex-1 pl-3">
+                        <div class="text-xs font-medium mb-1.5">优先任务</div>
+                        
+                        <div class="mb-2">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 rounded-full border border-[#61C2F2] mr-2 flex-shrink-0"></div>
+                                <span class="text-xs">准备晚餐</span>
+                                <div class="ml-auto bg-[#ffeee7] px-1.5 py-0.5 rounded text-[10px] text-[#f28561]">爸爸</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 rounded-full border border-[#61C2F2] mr-2 flex-shrink-0"></div>
+                                <span class="text-xs">辅导作业</span>
+                                <div class="ml-auto bg-[#ffeee7] px-1.5 py-0.5 rounded text-[10px] text-[#f28561]">妈妈</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 rounded-full border border-[#61C2F2] mr-2 flex-shrink-0 flex items-center justify-center">
+                                    <div class="w-2 h-2 rounded-full bg-[#61C2F2]"></div>
+                                </div>
+                                <span class="text-xs line-through text-gray-400">洗碗</span>
+                                <div class="ml-auto bg-[#E6F4FD] px-1.5 py-0.5 rounded text-[10px] text-[#61C2F2]">孩子</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部进度 -->
+                <div class="mt-auto pt-2 border-t border-gray-100">
+                    <div class="flex justify-between text-xs mb-1">
+                        <span>家庭总进度</span>
+                        <span class="text-[#f28561]">67%</span>
+                    </div>
+                    <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-[#f28561] rounded-full" style="width: 67%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 添加一些说明 -->
+    <div class="mt-10 max-w-lg text-center text-sm text-gray-500">
+        <p class="mb-2">iOS小组件可以让用户在不打开应用的情况下，直接在主屏幕上查看家庭任务信息。</p>
+        <p>小尺寸小组件适合个人任务跟踪，中尺寸小组件提供更完整的家庭任务概览。</p>
+    </div>
+    
+    <style>
+        .bg-pattern-dots {
+            background-image: radial-gradient(#f28561 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+    </style>
+</div> 
