@@ -106,7 +106,7 @@
     </style>
 </head>
 <body class="bg-gray-100 flex flex-col items-center p-8 min-h-screen">
-    <div class="flex space-x-6 mb-10 flex-wrap justify-center" id="app-container">
+    <div class="flex flex-wrap gap-8 justify-center" id="app-container">
         <!-- 组件将通过JavaScript动态加载 -->
     </div>
 
@@ -116,7 +116,8 @@
             'components/task-center.html',
             'components/emotion-log.html',
             'components/weekly-report.html',
-            'components/meeting-review.html'
+            'components/meeting-review.html',
+            'components/family-center.html'
         ];
         
         
@@ -139,7 +140,11 @@
                     console.error(`Error loading component ${componentPath}:`, error);
                 }
             }
+            
+            // 不再隐藏家庭中心页面，所有页面平铺展示
         }
+        
+        // 不再需要页面切换功能
         
         // 页面加载时执行
         document.addEventListener('DOMContentLoaded', loadComponents);
