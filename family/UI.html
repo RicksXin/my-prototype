@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭管理App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            border: 12px solid #111;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        .tab-active {
+            color: #000;
+            font-weight: 600;
+            border-bottom: 2px solid #000;
+        }
+        .tab-inactive {
+            color: #9ca3af;
+        }
+        .task-progress {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: conic-gradient(#3ecf9f 0% 75%, #e6f8f3 75% 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .task-progress-inner {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        .task-card {
+            transition: all 0.2s ease;
+        }
+        .task-card:active {
+            transform: scale(0.98);
+        }
+        .emotion-calendar td {
+            height: 50px;
+            width: 45px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .emotion-day {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: auto;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .emotion-day:hover {
+            background-color: #f3f4f6;
+        }
+        .emotion-selected {
+            background-color: #f3f4f6;
+        }
+        .emotion-with-mood {
+            position: relative;
+        }
+        .emotion-with-mood::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #f28561;
+        }
+        .tag-cloud span {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background-color: #f3f4f6;
+        }
+        .tag-cloud span:nth-child(2n) {
+            background-color: #e5e7eb;
+        }
+        .tag-cloud span:nth-child(3n) {
+            background-color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center p-8 min-h-screen">
+    <div class="flex flex-wrap gap-8 justify-center" id="app-container">
+        <!-- 组件将通过JavaScript动态加载 -->
+    </div>
+
+    <script>
+        // 定义要加载的组件文件
+        const components = [
+            'components/task-center.html',
+            'components/emotion-log.html',
+            'components/weekly-report.html',
+            'components/meeting-review.html',
+            'components/family-center.html',
+            'components/ios-widget.html'
+        ];
+        
+        
+        const container = document.getElementById('app-container');
+        
+        // 加载并插入每个组件
+        async function loadComponents() {
+            for (const componentPath of components) {
+                try {
+                    const response = await fetch(componentPath);
+                    const html = await response.text();
+                    
+                    // 创建一个包装器来注入HTML
+                    const wrapper = document.createElement('div');
+                    wrapper.innerHTML = html;
+                    
+                    // 将组件添加到容器中
+                    container.appendChild(wrapper.firstElementChild);
+                } catch (error) {
+                    console.error(`Error loading component ${componentPath}:`, error);
+                }
+            }
+            
+            // 不再隐藏家庭中心页面，所有页面平铺展示
+        }
+        
+        // 不再需要页面切换功能
+        
+        // 页面加载时执行
+        document.addEventListener('DOMContentLoaded', loadComponents);
+    </script>
+</body>
+</html> 

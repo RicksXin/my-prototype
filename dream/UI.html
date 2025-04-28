@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家庭管理App</title>
+    <title>解梦App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -21,37 +21,46 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
         }
         .tab-active {
-            color: #000;
+            color: #fff;
             font-weight: 600;
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid #fff;
         }
         .tab-inactive {
-            color: #9ca3af;
+            color: rgba(255, 255, 255, 0.6);
         }
-        .task-progress {
-            width: 90px;
-            height: 90px;
+        .dream-gradient {
+            background: linear-gradient(135deg, #3B0764 0%, #7E22CE 50%, #D8B4FE 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .energy-ring {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background: conic-gradient(#3ecf9f 0% 75%, #e6f8f3 75% 100%);
+            background: conic-gradient(#7E22CE 0% 75%, rgba(126, 34, 206, 0.2) 75% 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
         }
-        .task-progress-inner {
-            width: 70px;
-            height: 70px;
+        .energy-ring-inner {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            background: white;
+            background: #3B0764;
             display: flex;
             align-items: center;
             justify-content: center;
             position: absolute;
         }
-        .task-card {
+        .dream-card {
             transition: all 0.2s ease;
         }
-        .task-card:active {
+        .dream-card:active {
             transform: scale(0.98);
         }
         .emotion-calendar td {
@@ -72,22 +81,22 @@
             transition: all 0.2s ease;
         }
         .emotion-day:hover {
-            background-color: #f3f4f6;
+            background-color: rgba(255, 255, 255, 0.1);
         }
         .emotion-selected {
-            background-color: #f3f4f6;
+            background-color: rgba(255, 255, 255, 0.2);
         }
-        .emotion-with-mood {
+        .emotion-with-dream {
             position: relative;
         }
-        .emotion-with-mood::after {
+        .emotion-with-dream::after {
             content: "";
             position: absolute;
             bottom: -2px;
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: #f28561;
+            background-color: #C85EFF;
         }
         .tag-cloud span {
             display: inline-block;
@@ -95,13 +104,31 @@
             margin: 0.25rem;
             border-radius: 999px;
             font-size: 0.75rem;
-            background-color: #f3f4f6;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
         }
         .tag-cloud span:nth-child(2n) {
-            background-color: #e5e7eb;
+            background-color: rgba(255, 255, 255, 0.15);
         }
         .tag-cloud span:nth-child(3n) {
-            background-color: #d1d5db;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .floating-btn {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .heat-map {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+        .heat-map-cell {
+            height: 20px;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -113,14 +140,11 @@
     <script>
         // 定义要加载的组件文件
         const components = [
-            'components/task-center.html',
-            'components/emotion-log.html',
-            'components/weekly-report.html',
-            'components/meeting-review.html',
-            'components/family-center.html',
-            'components/ios-widget.html'
+            'components/home.html',
+            'components/record.html',
+            'components/profile.html',
+            'components/interpret.html'
         ];
-        
         
         const container = document.getElementById('app-container');
         
@@ -141,11 +165,7 @@
                     console.error(`Error loading component ${componentPath}:`, error);
                 }
             }
-            
-            // 不再隐藏家庭中心页面，所有页面平铺展示
         }
-        
-        // 不再需要页面切换功能
         
         // 页面加载时执行
         document.addEventListener('DOMContentLoaded', loadComponents);

@@ -1,0 +1,277 @@
+<!-- 我的页 -->
+<div class="phone-frame mb-10">
+    <div class="h-full flex flex-col overflow-hidden dream-gradient">
+        <!-- 顶部导航栏 -->
+        <div class="px-5 pt-6 pb-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-semibold text-white">我的</h1>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 主要内容区域，添加滚动条 -->
+        <div class="flex-1 overflow-y-auto px-5 pb-24">
+            <!-- 用户信息卡 -->
+            <div class="pt-2 pb-6 flex items-center">
+                <div class="w-16 h-16 rounded-full bg-purple-900 bg-opacity-40 flex items-center justify-center mr-4 border-2 border-white border-opacity-30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-white font-semibold text-lg">梦游者</h2>
+                    <p class="text-white opacity-70 text-sm mt-1">已记录42个梦境 · 解梦大师</p>
+                </div>
+            </div>
+            
+            <!-- 解梦能量环 -->
+            <div class="mb-6">
+                <div class="bg-white bg-opacity-10 rounded-xl p-5 glass-effect">
+                    <h3 class="text-white font-medium mb-4">解梦能量</h3>
+                    <div class="flex items-center justify-between">
+                        <div class="energy-ring">
+                            <div class="energy-ring-inner flex flex-col items-center justify-center">
+                                <span class="text-white text-2xl font-semibold">15</span>
+                                <span class="text-white text-xs opacity-70">剩余次数</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 ml-5">
+                            <div class="mb-3">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-white text-xs">每日免费</span>
+                                    <span class="text-white text-xs">3/3</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-white text-xs">记录奖励</span>
+                                    <span class="text-white text-xs">7/10</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-white text-xs">深度解析额度</span>
+                                    <span class="text-white text-xs">5/5</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-purple-600 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 行为分析 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-white font-semibold">行为分析</h3>
+                    <span class="text-xs text-white opacity-60">查看详情 ></span>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-xl p-4 glass-effect">
+                    <!-- 高频时段热力图 -->
+                    <h4 class="text-white text-sm mb-3">梦境发生时段</h4>
+                    <div class="mb-4">
+                        <div class="heat-map">
+                            <!-- 每周7天，24小时热力图简化版 -->
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-10"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-10"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-10"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-20"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-30"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-20"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-10"></div>
+                            
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-20"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-30"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-40"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-50"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-60"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-40"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-30"></div>
+                            
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-30"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-40"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-70"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-90"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-80"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-60"></div>
+                            <div class="heat-map-cell bg-purple-900 bg-opacity-40"></div>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span class="text-white text-xs opacity-50">周一</span>
+                            <span class="text-white text-xs opacity-50">周四</span>
+                            <span class="text-white text-xs opacity-50">周日</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 关键词云 -->
+                    <h4 class="text-white text-sm mb-2">高频元素</h4>
+                    <div class="tag-cloud">
+                        <span>水 (12)</span>
+                        <span>飞行 (9)</span>
+                        <span>坠落 (7)</span>
+                        <span>追逐 (6)</span>
+                        <span>考试 (5)</span>
+                        <span>迷宫 (5)</span>
+                        <span>陌生人 (4)</span>
+                        <span>丢失 (3)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 学术偏好设置 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-white font-semibold">学术偏好</h3>
+                    <span class="text-xs text-white opacity-60">自定义 ></span>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-xl p-4 glass-effect">
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-purple-800 flex items-center justify-center mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z" clip-rule="evenodd" />
+                                        <path d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
+                                    </svg>
+                                </div>
+                                <span class="text-white font-medium">弗洛伊德学派</span>
+                            </div>
+                            <div class="relative">
+                                <div class="w-10 h-5 rounded-full bg-purple-800"></div>
+                                <div class="absolute right-0 top-0 w-5 h-5 rounded-full bg-white shadow-md"></div>
+                            </div>
+                        </div>
+                        <p class="text-white text-xs opacity-70 ml-11">注重潜意识与性象征解析，提供深层次心理分析</p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-purple-800 flex items-center justify-center mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-white font-medium">荣格学派</span>
+                            </div>
+                            <div class="relative">
+                                <div class="w-10 h-5 rounded-full bg-purple-800"></div>
+                                <div class="absolute right-0 top-0 w-5 h-5 rounded-full bg-white shadow-md"></div>
+                            </div>
+                        </div>
+                        <p class="text-white text-xs opacity-70 ml-11">关注原型与集体无意识，探索个体化过程</p>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-purple-800 flex items-center justify-center mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <span class="text-white font-medium">现代神经科学</span>
+                            </div>
+                            <div class="relative">
+                                <div class="w-10 h-5 rounded-full bg-gray-700"></div>
+                                <div class="absolute left-0 top-0 w-5 h-5 rounded-full bg-white shadow-md"></div>
+                            </div>
+                        </div>
+                        <p class="text-white text-xs opacity-70 ml-11">基于脑科学研究和认知心理学的解梦模式</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对话记忆库 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-white font-semibold">对话记忆库</h3>
+                    <span class="text-xs text-white opacity-60">全部 ></span>
+                </div>
+                <div class="space-y-3">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4 glass-effect">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-white font-medium">关于"水中迷宫"的对话</h4>
+                            <span class="text-xs text-white opacity-60">昨天</span>
+                        </div>
+                        <p class="text-white text-xs opacity-70 mb-3 line-clamp-2">
+                            此梦境可能象征着你正在努力找寻自我内在深处的某些认知或情感，而水晶墙则代表着透明但难以突破的心理屏障...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex">
+                                <span class="text-xs text-white bg-purple-700 bg-opacity-30 rounded-full px-2 py-0.5 mr-1">弗洛伊德</span>
+                                <span class="text-xs text-white bg-purple-700 bg-opacity-30 rounded-full px-2 py-0.5">荣格</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 rounded-xl p-4 glass-effect">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-white font-medium">关于"飞行与坠落"的对话</h4>
+                            <span class="text-xs text-white opacity-60">3天前</span>
+                        </div>
+                        <p class="text-white text-xs opacity-70 mb-3 line-clamp-2">
+                            飞行通常与自由和超越现实限制的愿望有关，而坠落则反映了对失控或失败的恐惧。你的梦境表现出对这种两极情绪的循环...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex">
+                                <span class="text-xs text-white bg-purple-700 bg-opacity-30 rounded-full px-2 py-0.5 mr-1">荣格</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-opacity-10 backdrop-blur-lg bg-black border-t border-white border-opacity-10">
+            <div class="flex h-full">
+                <div class="flex-1 flex flex-col items-center justify-center tab-inactive">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span class="text-xs mt-1">首页</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center tab-inactive">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <span class="text-xs mt-1">记录</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center tab-inactive">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    <span class="text-xs mt-1">解梦</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center tab-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <span class="text-xs mt-1">我的</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
