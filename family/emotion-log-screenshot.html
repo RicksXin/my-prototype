@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪日志截图工具</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            background-color: #f28561;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        button:hover {
+            background-color: #e67452;
+        }
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background: white;
+            max-width: 100%;
+            overflow: auto;
+        }
+        #result img {
+            max-width: 100%;
+            height: auto;
+        }
+        .loading {
+            display: none;
+            margin: 10px 0;
+            font-style: italic;
+            color: #666;
+        }
+        .download-link {
+            display: inline-block;
+            background-color: #3ecf9f;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h2>情绪日志长图生成工具</h2>
+        <p>点击下面的按钮生成情绪日志页面的长图：</p>
+        <div>
+            <button id="captureBtn">捕获可见区域</button>
+            <button id="captureFullBtn">捕获完整内容</button>
+            <button id="captureLongBtn">生成长图</button>
+        </div>
+        <div id="loading" class="loading">正在生成长图，请稍候...</div>
+    </div>
+    
+    <iframe id="page-frame" src="emotion-log.html" style="width:375px; height:667px; border:none; margin-bottom:20px;"></iframe>
+    
+    <div id="result"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('page-frame');
+            const loading = document.getElementById('loading');
+            const result = document.getElementById('result');
+            
+            // 确保iframe加载完成
+            iframe.onload = function() {
+                console.log('iframe加载完成');
+            };
+            
+            // 捕获可见区域
+            document.getElementById('captureBtn').addEventListener('click', function() {
+                loading.style.display = 'block';
+                
+                html2canvas(iframe.contentDocument.body, {
+                    allowTaint: true,
+                    useCORS: true,
+                    scale: 2
+                }).then(canvas => {
+                    showResult(canvas, '情绪日志_可见区域.png');
+                });
+            });
+            
+            // 捕获完整内容
+            document.getElementById('captureFullBtn').addEventListener('click', function() {
+                loading.style.display = 'block';
+                
+                const iframeBody = iframe.contentDocument.body;
+                const tempContainer = iframe.contentDocument.querySelector('.app-container');
+                
+                html2canvas(tempContainer, {
+                    allowTaint: true,
+                    useCORS: true,
+                    height: tempContainer.scrollHeight,
+                    windowHeight: tempContainer.scrollHeight,
+                    scale: 2
+                }).then(canvas => {
+                    showResult(canvas, '情绪日志_完整内容.png');
+                });
+            });
+            
+            // 生成长图
+            document.getElementById('captureLongBtn').addEventListener('click', function() {
+                loading.style.display = 'block';
+                
+                // 获取iframe中的内容元素
+                const iframeDoc = iframe.contentDocument;
+                const contentEl = iframeDoc.querySelector('.app-container');
+                const scrollEl = iframeDoc.querySelector('.overflow-y-auto');
+                
+                // 备份原始样式
+                const originalHeight = scrollEl.style.height;
+                const originalOverflow = scrollEl.style.overflow;
+                
+                // 临时修改样式以展开所有内容
+                scrollEl.style.height = 'auto';
+                scrollEl.style.overflow = 'visible';
+                
+                // 等待DOM更新
+                setTimeout(() => {
+                    html2canvas(contentEl, {
+                        allowTaint: true,
+                        useCORS: true,
+                        height: contentEl.scrollHeight,
+                        windowHeight: contentEl.scrollHeight,
+                        scale: 2
+                    }).then(canvas => {
+                        // 恢复原始样式
+                        scrollEl.style.height = originalHeight;
+                        scrollEl.style.overflow = originalOverflow;
+                        
+                        showResult(canvas, '情绪日志_长图.png');
+                    });
+                }, 300);
+            });
+            
+            // 显示结果
+            function showResult(canvas, filename) {
+                result.innerHTML = '';
+                
+                const img = new Image();
+                img.src = canvas.toDataURL('image/png');
+                result.appendChild(img);
+                
+                const downloadLink = document.createElement('a');
+                downloadLink.href = canvas.toDataURL('image/png');
+                downloadLink.download = filename;
+                downloadLink.className = 'download-link';
+                downloadLink.textContent = '下载图片';
+                
+                result.appendChild(document.createElement('br'));
+                result.appendChild(downloadLink);
+                
+                loading.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

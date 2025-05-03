@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.dialog-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #ff4d4f;
+}
+
+.dialog-body {
+    padding: 20px;
+}
+
+.editable-area {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow-y: auto;
+    word-break: break-word;
+}
+
+.editable-area:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    pointer-events: none;
+}
+
+.editable-area:focus {
+    outline: none;
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    gap: 12px;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#cancel-btn {
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    color: #666;
+}
+
+#cancel-btn:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+}
+
+#confirm-btn {
+    background-color: #1890ff;
+    border: 1px solid #1890ff;
+    color: white;
+}
+
+#confirm-btn:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+} 

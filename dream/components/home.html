@@ -48,7 +48,7 @@
                         <div class="relative w-20 h-20 mr-4 flex-shrink-0">
                             <svg viewBox="0 0 36 36" class="w-full h-full">
                                 <path class="opacity-20" fill="none" stroke="#fff" stroke-width="2" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                                <path fill="none" stroke="#A78BFA" stroke-width="2" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                <path fill="none" stroke="#D8B4FE" stroke-width="2" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
                                 <text x="18" y="20.5" text-anchor="middle" class="text-xs" fill="white">75%</text>
                             </svg>
                         </div>
@@ -75,14 +75,14 @@
                     <!-- 关键词词云 -->
                     <h3 class="text-white text-sm mb-2">关键词</h3>
                     <div class="tag-cloud mb-4">
-                        <div class="flex">
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5 mr-1">飞行</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">坠落</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">追逐</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">水</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">树木</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">迷宫</span>
-                            <span class="text-xs text-white bg-purple-500 bg-opacity-30 rounded-full px-2 py-0.5">考试</span>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">飞行</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">坠落</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">追逐</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">水</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">树木</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">迷宫</span>
+                            <span class="text-xs text-white bg-purple-600 bg-opacity-30 rounded-full px-2 py-0.5">考试</span>
                         </div>
                     </div>
                     
@@ -100,9 +100,9 @@
                         <!-- 情绪波形 -->
                         <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                             <path d="M0,40 L14.3,20 L28.6,50 L42.9,45 L57.1,15 L71.4,25 L85.7,20 L100,30" 
-                                  fill="none" stroke="#7E22CE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                  fill="none" stroke="#9333EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M0,60 L14.3,75 L28.6,80 L42.9,60 L57.1,85 L71.4,65 L85.7,70 L100,50" 
-                                  fill="none" stroke="#D8B4FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                                  fill="none" stroke="#E9D5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                                   stroke-dasharray="3,2" />
                         </svg>
                         
@@ -120,7 +120,7 @@
                     </div>
                     
                     <!-- AI建议卡片 -->
-                    <div class="bg-purple-900 bg-opacity-40 rounded-lg p-3">
+                    <div class="bg-purple-800 bg-opacity-30 rounded-lg p-3">
                         <div class="flex">
                             <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0 mr-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -138,7 +138,7 @@
         </div>
         
         <!-- 底部导航栏 -->
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-opacity-10 backdrop-blur-lg bg-black border-t border-white border-opacity-10">
+        <div class="z-99 bottom-0 left-0 right-0 h-16 bg-opacity-10 backdrop-blur-lg bg-black border-t border-white border-opacity-10">
             <div class="flex h-full">
                 <div class="flex-1 flex flex-col items-center justify-center tab-active">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -169,7 +169,7 @@
         
         <!-- 悬浮对话入口 -->
         <div class="absolute bottom-24 right-6 floating-btn">
-            <div class="w-14 h-14 rounded-full bg-purple-600 shadow-lg flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-purple-600 shadow-lg flex items-center justify-center backdrop-blur-sm bg-opacity-90">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>

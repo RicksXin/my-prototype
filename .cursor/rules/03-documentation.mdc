@@ -1,0 +1,36 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# 文档规范指南
+
+## README 规范
+
+1. 每个主要模块都必须包含 README.md
+2. README 必须包含以下内容：
+   - 模块功能描述
+   - 安装和运行说明
+   - 主要依赖说明
+   - API 文档链接
+
+## API 文档规范
+
+1. 使用 OpenAPI/Swagger 规范
+2. 包含请求/响应示例
+3. 详细的错误码说明
+4. 版本变更记录
+
+## 注释文档规范
+
+1. 组件文档使用 JSDoc 格式
+2. 包含参数类型和返回值说明
+3. 复杂逻辑需要包含示例代码
+4. 标注废弃（deprecated）功能
+
+## 版本管理
+
+1. 遵循语义化版本（Semantic Versioning）
+2. 重要更新需要更新 CHANGELOG.md
+3. 版本号格式：主版本号.次版本号.修订号
+4. 预发布版本使用 -alpha, -beta 标识

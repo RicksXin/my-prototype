@@ -29,19 +29,19 @@
             color: rgba(255, 255, 255, 0.6);
         }
         .dream-gradient {
-            background: linear-gradient(135deg, #3B0764 0%, #7E22CE 50%, #D8B4FE 100%);
+            background: linear-gradient(135deg, #6B21A8 0%, #9333EA 50%, #D8B4FE 100%);
         }
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .energy-ring {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: conic-gradient(#7E22CE 0% 75%, rgba(126, 34, 206, 0.2) 75% 100%);
+            background: conic-gradient(#9333EA 0% 75%, rgba(147, 51, 234, 0.2) 75% 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,7 +51,7 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: #3B0764;
+            background: #6B21A8;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,7 +96,7 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: #C85EFF;
+            background-color: #E9D5FF;
         }
         .tag-cloud span {
             display: inline-block;
@@ -154,7 +154,7 @@
                 try {
                     const response = await fetch(componentPath);
                     const html = await response.text();
-                    
+                                        
                     // 创建一个包装器来注入HTML
                     const wrapper = document.createElement('div');
                     wrapper.innerHTML = html;
